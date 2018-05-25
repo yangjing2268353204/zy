@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1.正方形,外层循环  十次就是十行,  内层循环  十次就是 一行十个星星
+        var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = 1; j < 10; j++){
+                str = str + '* '
+            }
+            str += '\n'
+        }
+        console.log(str);
+        //2.左上三角形,外层循环  十次就是十行  内层循环 找规律:外层第几行+每行的个数=10,故内层循环每行的个数10-i
+        // 第一种方法:用范围值条件 控制打印的个数
+        var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = 1; j < 10-i; j++){
+                str = str + '* '
+            }
+            str += '\n'
+        }
+        console.log(str);
+
+        // 第二种方法: 用起始值 赋值条件 控制个数用i,减少每行的个数
+        var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = i; j < 10; j++){
+                str = str + '* '
+            }
+            str += '\n'
+        }
+        console.log(str);
+
+        // 3.左下三角形,内层循环,初始值从1开始,范围值随外层循环行数的增加,打印个数也逐渐增加;
+        var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = 1; j <= i; j++){
+                str = str + '* '
+            }
+            str += '\n'
+        }
+        console.log(str);
+    
+        // 4.右上三角形,
+        var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = 1; j <= i; j++){
+                str += ' ';
+            }
+            // str += '\n'
+            for(var m = 1; m <= 10- i; m++){
+                str += '* ';
+            }
+            str += '\n'
+        }
+        console.log(str);
+    // 5.等腰三角形
+         var str = '';
+        for(var i = 1; i < 10; i++){
+            for(var j = 1; j <= i; j++){
+                str += ' ';
+            }
+            // str += '\n'
+            for(var m = 1; m <= 10- i; m++){
+                str += '* ';
+            }
+            str += '\n'
+        }
+        console.log(str);
+
+        // 6.右下三角形
+        var str = '';
+                for(var i = 1; i < 10; i++){
+                    for(var j = 1; j <= 10-i; j++){
+                        str += ' ';
+                    }
+                    // str += '\n'
+                    for(var m = 1; m <= i; m++){
+                        str += '*'; 
+                    }
+                    str += '\n'
+                }
+                console.log(str);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
